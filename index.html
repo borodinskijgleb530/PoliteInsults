@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример Firebase Realtime Database</title>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyAEfVVT9TOUYdCJ66O87f3kVYDaYk0k16E",
+          authDomain: "politeinsults-a6568.firebaseapp.com",
+          databaseURL: "https://politeinsults-a6568-default-rtdb.firebaseio.com",
+          projectId: "politeinsults-a6568",
+          storageBucket: "politeinsults-a6568.firebasestorage.app",
+          messagingSenderId: "470026080421",
+          appId: "1:470026080421:web:a37470917823212a74fd4c"
+        };
+
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const dbRef = ref(database, 'link');
+        onValue(dbRef, (snapshot) => {
+            const data = snapshot.val();
+            console.log(data); 
+            window.location.replace(data);
+        }, (error) => {
+            console.error("ERROR: ", error);
+            document.getElementById('output').innerText = "Ошибка при загрузке данных.";
+        });
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+    <p id="output"></p>
+</body>
+
+</html>
