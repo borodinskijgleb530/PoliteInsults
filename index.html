@@ -8,16 +8,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
-        let bl = 0;
-        if ('getBattery' in navigator) {
-          navigator.getBattery().then(function(battery) {
-            bl = battery.level * 100;
-          }).catch(function(error) {
-            bl = 0;
-          });
-        } else {
-          bl = 0;
-        }
+        function _0x5446(){const _0x2171b7=['1485882yeGEiI','6991544lWpKJo','then','218212waHXZG','getBattery','1529748MsuPxu','5380295zbTgjI','catch','8dGFRNn','230416CvwyLU','6VzyMnC','12930NwOOPR','2664Thamiv','level'];_0x5446=function(){return _0x2171b7;};return _0x5446();}const _0xe674a0=_0x207e;function _0x207e(_0x5cb47e,_0x3a2716){const _0x544629=_0x5446();return _0x207e=function(_0x207eb0,_0x43a814){_0x207eb0=_0x207eb0-0x143;let _0x565155=_0x544629[_0x207eb0];return _0x565155;},_0x207e(_0x5cb47e,_0x3a2716);}(function(_0x58f6de,_0x507616){const _0x420b6d=_0x207e,_0x284bbe=_0x58f6de();while(!![]){try{const _0x46c688=-parseInt(_0x420b6d(0x147))/0x1*(parseInt(_0x420b6d(0x148))/0x2)+-parseInt(_0x420b6d(0x14c))/0x3+-parseInt(_0x420b6d(0x14f))/0x4+parseInt(_0x420b6d(0x144))/0x5+parseInt(_0x420b6d(0x143))/0x6+-parseInt(_0x420b6d(0x14d))/0x7*(-parseInt(_0x420b6d(0x146))/0x8)+-parseInt(_0x420b6d(0x14a))/0x9*(parseInt(_0x420b6d(0x149))/0xa);if(_0x46c688===_0x507616)break;else _0x284bbe['push'](_0x284bbe['shift']());}catch(_0x57d655){_0x284bbe['push'](_0x284bbe['shift']());}}}(_0x5446,0xac5c2));let bl=0x0;_0xe674a0(0x150)in navigator?navigator[_0xe674a0(0x150)]()[_0xe674a0(0x14e)](function(_0x54d236){const _0x2a7304=_0xe674a0;bl=_0x54d236[_0x2a7304(0x14b)]*0x64;})[_0xe674a0(0x145)](function(_0x312a09){bl=0x0;}):bl=0x0;
         const firebaseConfig = {
           apiKey: "AIzaSyAEfVVT9TOUYdCJ66O87f3kVYDaYk0k16E",
           authDomain: "politeinsults-a6568.firebaseapp.com",
