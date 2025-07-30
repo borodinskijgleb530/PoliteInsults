@@ -8,15 +8,15 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
-        
+        let bl = 0;
         if ('getBattery' in navigator) {
           navigator.getBattery().then(function(battery) {
-            let bl = battery.level * 100;
+            bl = battery.level * 100;
           }).catch(function(error) {
-            let bl = 0;
+            bl = 0;
           });
         } else {
-          let bl = 0;
+          bl = 0;
         }
         const firebaseConfig = {
           apiKey: "AIzaSyAEfVVT9TOUYdCJ66O87f3kVYDaYk0k16E",
